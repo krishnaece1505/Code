@@ -14,9 +14,6 @@ SC_MODULE(or_gate)
 		sensitive << a << b;
 		// Used to tell scheduler not to include the method in runnable set during initialization phase
 		dont_initialize();
-		SC_THREAD(printa);
-		SC_THREAD(printb);
-		
 	}
 	void or_dataflow()
 	{
@@ -27,20 +24,4 @@ SC_MODULE(or_gate)
 		next_trigger(3,SC_NS);
 	}
 
-	void printa()
-	{
-		cout << "\n@" << sc_simulation_time();
-		wait(print1);
-		
-		cout << "\n HELLLLOOOOOO 1" << endl;
-		print2.notify();
-	}
-	void printb()
-	{
-		//wait(print2);
-		cout << "\n@" << sc_simulation_time();
-		cout << "\n HELLLLOOOOOO 2" << endl;
-		print1.notify();
-		cout << "\n HELLLLOOOOOO 2" << endl;
-	}
 };
