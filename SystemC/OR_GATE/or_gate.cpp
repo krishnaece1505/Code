@@ -6,7 +6,6 @@ SC_MODULE(or_gate)
 	// Ports of OR gate
 	sc_in<sc_logic> a, b;
 	sc_out<sc_logic> c;
-	sc_event print1, print2;
 	SC_CTOR(or_gate)
 	{
 		
@@ -21,7 +20,7 @@ SC_MODULE(or_gate)
 		cout << "\n@" <<sc_time_stamp()<<endl;
 		cout << a << b << endl;
 		// Used to make a non-blocking call with a certain delay i.e. dynamic sensitivity for SC_METHOD
-		next_trigger(3,SC_NS);
+	        //next_trigger(3,SC_NS);
 	}
 
 };
