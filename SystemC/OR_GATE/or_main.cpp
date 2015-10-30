@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+// Uncomment the below macro to generate a waveform for the OR gate inputs and outputs
 //#define WAVE
 #include "or_gate.cpp"
 #include "TB_or_gate.cpp"
@@ -12,13 +13,6 @@ int sc_main(int argc, char* argv[])
 
 	// Declare the channel to communicate between or_gate and its TB
 	sc_buffer<sc_logic> A, B, C;
-
-	//or_gate OR("OR");
-	/*OR.a(A);
-	OR.b(B);
-	OR.c(C);
-	*/
-	//OR (A, B, C); 
 
 	// MODULE INST USING POINTERS
 	or_gate *OR;
