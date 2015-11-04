@@ -1,8 +1,8 @@
---------------------------------------------------------------------------------- 
--- Module : WORD (OR) SUBSTRING SEARCH FROM A STRING
---
--- Author : Krishnaswamy Kannan
----------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------- 
+// Module : WORD (OR) SUBSTRING SEARCH FROM A STRING
+//
+// Author : Krishnaswamy Kannan
+//---------------------------------------------------------------------------------
 #define _CRT_SECURE_NO_WARNINGS // To disable scanf error/warning in Visual studio
 #include<stdio.h>
 #include<conio.h>
