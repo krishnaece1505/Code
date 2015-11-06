@@ -14,7 +14,7 @@ void main()
 	char op = 'Y';
 	system("@cls||clear"); // Clear the console
 	 
-	int count1 = 0, count2 = 0, i, j, flag;
+	int str_count = 0, substr_count = 0, i, j, str_found_flag;
 
 	while (op == 'Y' || op == 'y')
 	{
@@ -25,27 +25,27 @@ void main()
 	printf("\n  Enter the word (or) substring to search: ");
 	scanf(" %s", &search);
 
-	while (str[count1] != '\0')
-		count1++;
+	while (str[str_count] != '\0')
+		str_count++;
 
-	while (search[count2] != '\0')
-		count2++;
+	while (search[substr_count] != '\0')
+		substr_count++;
 
-	for (i = 0; i <= count1 - count2; i++)
+	for (i = 0; i <= (str_count-substr_count); i++)
 	{
-		for (j = i; j<i + count2; j++)
+		for (j = i; j< (i + substr_count); j++)
 		{
-			flag = 1;
+			str_found_flag = 1;
 			if (str[j] != search[j - i])
 			{
-				flag = 0;
+				str_found_flag = 0;
 				break;
 			}
 		}
-		if (flag == 1)
+		if (str_found_flag == 1)
 			break;
 	}
-	if (flag == 1)
+	if (str_found_flag == 1)
 		printf("\n  SEARCH SUCCESSFUL!");
 	else
 		printf("\n  SEARCH UNSUCCESSFUL!");
