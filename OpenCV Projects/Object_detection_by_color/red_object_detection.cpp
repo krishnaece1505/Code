@@ -40,7 +40,8 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-	string dest_img_path = "";
+	string src_img_path = "C:/Users/Krishnaswamy Kannan/Pictures/img3.jpg";
+	string dst_img_path = "C:/Users/Krishnaswamy Kannan/Pictures/Test3.jpg";
 	//-------- Declare the Mat objects --------
 	Mat src; // Source image
 	Mat dst; // Destination image in BGR format
@@ -49,7 +50,7 @@ int main(int argc, char** argv)
 
 	cout << "\n ----------------- RED COLOR OBJECT DETECTION USING OPENCV -----------------n";
 	// -------- Read the source image --------
-	src = imread("C:/Users/Krishnaswamy Kannan/Pictures/red.jpg", 1);
+	src = imread(src_img_path, 1);
 
 	// -------- Print an error if failed to read the image --------
 	if (!src.data)
@@ -88,9 +89,9 @@ int main(int argc, char** argv)
 			break;
 		}
 	}
-	dest_img_path = "C:/Users/Krishnaswamy Kannan/Pictures/Test3.jpg";
-	imwrite(dest_img_path, dstThresholded);
-	cout << "\n Thresholded image has been saved in " << dest_img_path << endl;
+
+	imwrite(dst_img_path, dstThresholded);
+	cout << "\n Thresholded image has been saved in " << dst_img_path << endl;
 	return 0;
 
 }
