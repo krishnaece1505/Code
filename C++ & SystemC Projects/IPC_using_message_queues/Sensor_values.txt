@@ -1,0 +1,4 @@
+------ FIFO QUEUE ------
+First element on the right side
+
+|"3020"||"24'C"|
