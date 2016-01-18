@@ -1,5 +1,5 @@
 /*
-* Module : Krishna's Watch v1.0 -----> Customized Digital Watch with Arduino Pro Mini and 0.96" I2C OLED display
+* Module : Customized Digital Watch with Arduino Pro Mini and 0.96" I2C OLED display
 *
 * Author : Krishnaswamy Kannan
 *
@@ -54,7 +54,7 @@ int hour = 00;
 int minute = 00;
 int day = 1;
 int month = 1;
-int year = 2015;
+int year = 2016;
 // ------- Flag to shift from Time settings to Date settings -------
 int setTime_done = 0;
 // ------- Flag to shift from Date settings to Watch -------
@@ -293,9 +293,10 @@ void displayTime()
   display.print("0");
   }
   display.print(month);
-  display.print(".2015");
+  display.print(".");
+  display.print(year);
   display.display();
   // -------- Increment the minute after 60K milliseconds, i.e. 60 seconds --------
-  delay(60000);
+  delay(60500);
   minute++;
 }
