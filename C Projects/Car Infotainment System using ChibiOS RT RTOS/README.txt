@@ -19,4 +19,6 @@
     Thread2 is used for obtaining humidity and temperature values from the DHT11 Humidity & 
     Temperature sensor. The values from these sensors are printed on the Serial Monitor.
     
+   * A 4X4 keypad is used as an input to the system.
+    
 /***************************************************************************************************
