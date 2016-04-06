@@ -20,6 +20,7 @@ port = 5002
 
 while True:
     # --------------- Create the socket ---------------
+    # ------ AF_INET for IPV4 Address Family & SOCK_STREAM for TCP ------
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # --------------- Connect to the socket at ADDR given by host ---------------
     s.connect((host, port))
